@@ -17,12 +17,12 @@ This JSON file containted all the information about each car for sale.
 From the web page, I used JQuery to load the JSON file into an array and create
 a dynamic portion of the web page that held the "current inventory".
 
-In the real use case, this proved quite manageable - the web page changed maybe
+In the real use case, this proved quite manageable - the inventory spreadsheet changed maybe
 daily and another script I wrote (not here) "published" the content files up to 
 their web hosting provider.
 
-Per my contract I did not own the rights to the code I did, but the Excel->JSON->html5
-stuff was useful I thought, so I have created this simple sample web page to
+Per my contract I did not own the rights to the code I wrote, but the Excel->JSON->html5
+stuff was useful I thought, so I have created it with this simple sample web page to
 demonstrate the technique used.
 
 It is stripped down raw code; not intended to be "pretty" but to demonstrate the main
