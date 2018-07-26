@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+ *
+ * MIT License
+ *
+ * Copyright (c) 2018 Steve Anderson
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *
+-->
+
+<!--
+    Sample dyanmic web page example -- HTML / CSS / Javascript
+
+    This is a super-simple recreation of a project I did - a web page for a 
+    small used car dealer driven by an Excel spreadsheet that holds the
+    inventory.
+
+    The usage flow was:
+
+        - update the spreadsheet with the inventory information.
+        - export a JSON version of the data on the spreadsheet (VB script)
+        - html/javascript the JSON file in to create a dynamic web page.
+    
+    Not designed to be pretty - the colors are used to identify the
+    different div's and elements.
+
+    For development, I load jquery locally; for production you can get it from
+    a CDN: 
+
+  <script src="scripts/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+-->
+
+<head>
+  <title>Car Dealer Website Demo</title>
+
+  <link rel="stylesheet" type="text/css" href="stylesheets/cardealer.css"/>
+  <style type="stylesheets/cardealer.css"></style>
+
+  <script src="scripts/jquery-3.3.1.min.js"></script>
+  <script src="scripts/inventory.js"></script>
+
+</head>
+
+<body>
+<!--
+
+   The body is anchored by a container that holds everything:
+
+        - a header at the top
+        - a navigation panel on the left
+        - the "main" page, which will display inventory for sale
+        - a footer at the bottom
+
+    The "inventory.js" script will process the JSON of the inventory,
+    creating a "car" <div> for each item and appending it to the div main.
+
+-->
+    <div id="container">
+        <div id="header">
+            <p>
+ 	    <h1>Car Dealer Website Demo</h1>
+            </p>
+        </div>
+        <div id="content">
+          <div id="nav">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a class="selected" href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+          <div id="main">
+
+            <h3>This is the main</h3>
+
+          </div>
+        </div>
+        <div id="footer">
+            <h4>This is the footer</h4>
+            Copyright &copy; 2018 Steve Anderson 
+        </div>
+    </div>
+</body>
+</html>
+
